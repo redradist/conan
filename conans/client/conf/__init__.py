@@ -17,12 +17,12 @@ from conans.util.files import load
 _t_default_settings_yml = Template(textwrap.dedent("""
     # Only for cross building, 'os_build/arch_build' is the system that runs Conan
     os_build: [Windows, WindowsStore, Linux, Macos, FreeBSD, SunOS, AIX]
-    arch_build: [x86, x86_64, ppc32be, ppc32, ppc64le, ppc64, armv5el, armv5hf, armv6, armv7, armv7hf, armv7s, armv7k, armv8, armv8_32, armv8.3, sparc, sparcv9, mips, mips64, avr, s390, s390x, sh4le]
+    arch_build: [x86, x86_64, ppc32be, ppc32, ppc64le, ppc64, armv5el, armv5hf, armv6, armv7, armv7hf, armv7s, armv7k, armv8, armv8_32, armv8.3, sparc, sparcv9, mips, mips64, avr, s390, s390x, sh4le, xtensalx6]
 
     # Only for building cross compilation tools, 'os_target/arch_target' is the system for
     # which the tools generate code
     os_target: [Windows, Linux, Macos, Android, iOS, watchOS, tvOS, FreeBSD, SunOS, AIX, Arduino, Neutrino]
-    arch_target: [x86, x86_64, ppc32be, ppc32, ppc64le, ppc64, armv5el, armv5hf, armv6, armv7, armv7hf, armv7s, armv7k, armv8, armv8_32, armv8.3, sparc, sparcv9, mips, mips64, avr, s390, s390x, asm.js, wasm, sh4le]
+    arch_target: [x86, x86_64, ppc32be, ppc32, ppc64le, ppc64, armv5el, armv5hf, armv6, armv7, armv7hf, armv7s, armv7k, armv8, armv8_32, armv8.3, sparc, sparcv9, mips, mips64, avr, s390, s390x, asm.js, wasm, sh4le, xtensalx6]
 
     # Rest of the settings are "host" settings:
     # - For native building/cross building: Where the library/program will run.
@@ -54,7 +54,7 @@ _t_default_settings_yml = Template(textwrap.dedent("""
         Emscripten:
         Neutrino:
             version: ["6.4", "6.5", "6.6", "7.0", "7.1"]
-    arch: [x86, x86_64, ppc32be, ppc32, ppc64le, ppc64, armv4, armv4i, armv5el, armv5hf, armv6, armv7, armv7hf, armv7s, armv7k, armv8, armv8_32, armv8.3, sparc, sparcv9, mips, mips64, avr, s390, s390x, asm.js, wasm, sh4le]
+    arch: [x86, x86_64, ppc32be, ppc32, ppc64le, ppc64, armv4, armv4i, armv5el, armv5hf, armv6, armv7, armv7hf, armv7s, armv7k, armv8, armv8_32, armv8.3, sparc, sparcv9, mips, mips64, avr, s390, s390x, asm.js, wasm, sh4le, xtensalx6]
     compiler:
         sun-cc:
             version: ["5.10", "5.11", "5.12", "5.13", "5.14", "5.15"]
