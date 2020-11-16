@@ -19,7 +19,7 @@ from conans.model.info import ConanInfo
 from conans.model.manifest import FileTreeManifest
 from conans.model.ref import ConanFileReference, PackageReference
 from conans.paths import CONANFILE, CONANINFO, CONAN_MANIFEST
-from conans.test.utils.cpp_test_files import cpp_hello_source_files
+from conans.test.assets.cpp_test_files import cpp_hello_source_files
 from conans.test.utils.mocks import LocalDBMock, TestBufferConanOutput
 from conans.test.utils.server_launcher import TestServerLauncher
 from conans.test.utils.test_files import temp_folder
@@ -159,7 +159,7 @@ class RestApiTest(unittest.TestCase):
         self._upload_package(pref, {CONANINFO: conan_info})
 
         # Get the package info
-        info = self.api.get_package_info(pref)
+        info = self.api.get_package_info(pref, headers=None)
         self.assertIsInstance(info, ConanInfo)
         self.assertEqual(info, ConanInfo.loads(conan_info))
 
